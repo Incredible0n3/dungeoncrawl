@@ -6,7 +6,7 @@ build = "build.rs"
 
 [dependencies]
 bracket-lib = "~0.8"
-legion = "=0.4.0"
+legion = "~0.4.0"
 
 [target.'cfg(windows)'.build-dependencies]
 winres = "0.1"
@@ -17,4 +17,4 @@ ar = "x86_64-w64-mingw32-ar"
 
 [package.metadata.winres]
 OriginalFilename = "DUNGEONCRAWL.EXE"
-LegalCopyright = "Copyright © 2026"
+LegalCopyright = "Copyright © 2026 Rip City Technologies"
