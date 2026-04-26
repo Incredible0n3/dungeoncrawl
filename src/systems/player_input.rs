@@ -13,7 +13,8 @@ pub fn player_input(
 ) {
     let mut players = <(Entity, &Point)>::query()
         .filter(component::<Player>());
-
+    let mut enemies = <(Entity, &Point)>::query().filter(component::<Enemy>());
+    
     if let Some(key) = *key {
         let delta = match key {
             VirtualKeyCode::Left => Point::new(-1, 0),
@@ -28,7 +29,6 @@ pub fn player_input(
             .find_map(|(entity, pos)| Some((*entity, *pos + delta)) )
             .unwrap();
         
-        let mut enemies = <(Entity, &Point)>::query().filter(component::<Enemy>());
         let mut did_something = false;
         if delta.x !=0 || delta.y != 0 {
             let mut hit_something = false;
