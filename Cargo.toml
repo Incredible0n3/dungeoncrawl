@@ -9,12 +9,15 @@ bracket-lib = "~0.8"
 legion = "~0.4.0"
 
 [target.'cfg(windows)'.build-dependencies]
-winres = "0.1"
+winresource = "0.1"
 
 [target.x86_64-pc-windows-gnu]
 linker = "x86_64-w64-mingw32-gcc"
 ar = "x86_64-w64-mingw32-ar"
 
-[package.metadata.winres]
+[package.metadata.winresource]
 OriginalFilename = "DUNGEONCRAWL.EXE"
+FileDescription = "Dungeon Crawl Game"
+ProductName = "Dungeon Crawl"
+CompanyName = "Rip City Technologies"
 LegalCopyright = "Copyright © 2026 Rip City Technologies"
